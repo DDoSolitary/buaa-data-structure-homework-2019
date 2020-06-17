@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Build",
+			"command": "gcc",
+			"args": [
+				"-g",
+				"-std=c11",
+				"-Wall",
+				"-Wextra",
+				"-Wpedantic",
+				"-Wno-parentheses",
+				"-Werror=implicit-function-declaration",
+				"${file}",
+				"-o",
+				"${workspaceFolder}/out/${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
